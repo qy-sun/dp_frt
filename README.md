@@ -1,6 +1,6 @@
 # **Code for "Differentially Private Fisher Randomization Test with Binary Outcomes"**
 
-Under review and available on [arXiv](https://arxiv.org/abs/xxxx.xxxxx)
+Available on [arXiv](https://arxiv.org/abs/xxxx.xxxxx)
 
 ---
 
