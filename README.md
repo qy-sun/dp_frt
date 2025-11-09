@@ -28,4 +28,4 @@ The repository is organized into the following main directories:
 
 ## **Additional Notes**
 
-Some experiments were executed on the Duke Compute Cluster (DCC) using parallel jobs to accelerate replication. Minor numerical discrepancies may occur when running locally due to randomization and parallel execution order.
+Some experiments were executed on the Duke Compute Cluster (DCC) using parallel jobs to accelerate replication. Minor numerical discrepancies may occur if one chooose to run the codes locally due to randomization and parallel execution order.
