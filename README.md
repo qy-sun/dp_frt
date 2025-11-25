@@ -6,23 +6,20 @@ Available on [arXiv](https://arxiv.org/abs/xxxx.xxxxx)
 
 This repository contains code for reproducing the results in the paper *"Differentially Private Fisher Randomization Test with Binary Outcomes"*. 
 
-It implements a mechanism-aware Bayesian framework for differentially private causal inference in randomized experiments with binary outcomes, including:
-
 ---
 
 ## **Description**
 
 The repository is organized into the following main directories:
 
----
-
-## **Simulation Studies**
-
-
----
-
-## **Real Data Analysis**
-
+| Folder | Description |
+|:--|:--|
+| **DP-FRT.R** | Core implementation of the differentially private Fisher Randomization Test using Bayesian Denoising Approach. |
+| **DP-Decision.R** | Implements Bayesian and frequentist decision-making rules built on the DP-FRT framework. |
+| **Illustrative Figs/** | Scripts for generating illustrative figures **Figure 1** and **Figure 2**. |
+| **DP-Simu/** | Code for DP simulation studies, including **Table 1**, **Figure 3**, and **Table 2**. |
+| **Causal-Simu/** | Code for causal simulation studies, including **Table 3**, **Figure 4**, and **Figure 5**. |
+| **Real/** | Real-data application to ADAPTABLE cardiovascular trial for producing **Figure 6** and **Table 4**. |
 
 ---
 
