@@ -14,7 +14,7 @@ The repository is organized into the following main directories:
 
 | Folder | Description |
 |:--|:--|
-| **DP-FRT.R** | Core implementation of the differentially private Fisher Randomization Test using Bayesian Denoising Approach. |
+| **DP-FRT.R** | Core implementation of the differentially private Fisher Randomization Test using Bayesian denoising approach. |
 | **DP-Decision.R** | Implements Bayesian and frequentist decision-making rules built on the DP-FRT framework. |
 | **Illustrative Figs/** | Scripts for generating illustrative figures **Figure 1** and **Figure 2**. |
 | **DP-Simu/** | Code for DP simulation studies, including **Table 1**, **Figure 3**, and **Table 2**. |
