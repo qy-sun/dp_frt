@@ -1,10 +1,10 @@
-# **Code for "Differentially Private Fisher Randomization Test with Binary Outcomes"**
+# **Code for "Differentially Private Fisher Randomization Tests for Binary Outcomes"**
 
 Available on [arXiv](https://arxiv.org/abs/2511.20884)
 
 ---
 
-This repository contains code for reproducing the results in the paper *"Differentially Private Fisher Randomization Test with Binary Outcomes"*. 
+This repository contains code for reproducing the results in the paper *"Differentially Private Fisher Randomization Tests for Binary Outcomes"*. 
 
 ---
 
@@ -14,7 +14,7 @@ The repository is organized into the following main directories:
 
 | Folder | Description |
 |:--|:--|
-| **DP-FRT.R** | Core implementation of the differentially private Fisher Randomization Test using Bayesian denoising approach. |
+| **DP-FRT.R** | Core implementation of the differentially private Fisher randomization tests using Bayesian denoising approach. |
 | **DP-Decision.R** | Implements Bayesian and frequentist decision-making rules built on the DP-FRT framework. |
 | **Illustrative Figs/** | Scripts for generating illustrative figures **Figure 1** and **Figure 2**. |
 | **DP-Simu/** | Code for DP simulation studies, including **Table 1**, **Figure 3**, and **Table 2**. |
