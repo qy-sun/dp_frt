@@ -1,5 +1,7 @@
 # **Code for "Differentially Private Fisher Randomization Test with Binary Outcomes"**
 
+Available on [arXiv](https://arxiv.org/abs/2511.20884)
+
 ---
 
 This repository contains code for reproducing the results in the paper *"Differentially Private Fisher Randomization Test with Binary Outcomes"*. 
