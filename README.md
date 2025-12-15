@@ -1,6 +1,6 @@
 # **Code for "Differentially Private Fisher Randomization Tests for Binary Outcomes"**
 
-Available on [arXiv](https://arxiv.org/abs/2511.20884)
+Available on [arXiv](https://arxiv.org/abs/2511.20884) and under review.
 
 ---
 
@@ -14,12 +14,14 @@ The repository is organized into the following main directories:
 
 | Folder | Description |
 |:--|:--|
-| **DP-FRT.R** | Core implementation of the differentially private Fisher randomization tests using Bayesian denoising approach. |
-| **DP-Decision.R** | Implements Bayesian and frequentist decision-making rules built on the DP-FRT framework. |
-| **Illustrative Figs/** | Scripts for generating illustrative figures **Figure 1** and **Figure 2**. |
-| **DP-Simu/** | Code for DP simulation studies, including **Table 1**, **Figure 3**, and **Table 2**. |
-| **Causal-Simu/** | Code for causal simulation studies, including **Table 3**, **Figure 4**, and **Figure 5**. |
-| **Real/** | Real-data application to ADAPTABLE cardiovascular trial for producing **Figure 6** and **Table 4**. |
+| **DP-FRT.R** | Core implementation of the differentially private Fisher randomization tests, including DP-FRT-Bayes (recommended), DP-FRT-p, and DP-FRT-t. |
+| **DP-Decision.R** | Implements Bayesian and frequentist decision-making rules built on DP-FRT-Bayes. |
+| **DP-TopUp.R** | Implements Bayesian sequential decision under additional privacy budget. |
+| **Illustrative Figs/** | Code for generating illustrative figures **Figures 1--2**. |
+| **DP-Simu/** | Code for assessing DP-FRT-Bayes estimates of p-values, including **Table 1** and **Table 2**. |
+| **Causal-Simu/** | Code for evaluating decision rules under DP-FRT-Bayes, including **Table 3** and **Figures 3--5**. |
+| **Real/** | Analysis of ADAPTABLE trial for producing **Figure 6**. |
+| **Supp/** | Code for additional simulation studies in the supplementary material, including **Tables S1--S2** and **Figures S1--S4**. |
 
 ---
 
