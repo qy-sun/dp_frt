@@ -248,7 +248,8 @@ table_df <- design_grid %>%
   unnest(sim_res) %>%
   mutate(
     Table = "FigS4",
-    sample_size = factor("n=500", levels = "n=500"),
+    sample_size = factor(paste0("n=", n_total),
+                         levels = paste0("n=", c(100, 500, 1000))),
     scenario = factor(
       scenario,
       levels = c("no_effect","small","medium","large"),
@@ -275,7 +276,7 @@ plot_df_all <- table_df %>%
     ),
     sample_size = factor(
       sample_size,
-      levels = c("n=500")
+      levels = paste0("n=", c(100, 500, 1000))
     ),
     scenario = factor(
       scenario,

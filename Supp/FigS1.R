@@ -125,7 +125,7 @@ grouped_scenarios <- split(design_grid, design_grid$sample_size) |>
 
 set.seed(2025)
 eps_grid <- c(0.2, 0.5, 1)
-S_reps   <- 10
+S_reps   <- 1000
 prior_cr <- list(type="uniform")
 method_use <- "sampling"
 

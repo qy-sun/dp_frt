@@ -90,11 +90,11 @@ priors_common <- tibble(
 priors_bb <- tibble(
   prior_label = c("Beta(1,1)","Beta(0.5,0.5)","Beta(2,2)","Beta(1,2)","Beta(2,1)"),
   prior_obj   = list(
-    list(type="beta_binom", params=list(alpha=1,   beta=1)),
-    list(type="beta_binom", params=list(alpha=0.5, beta=0.5)),
-    list(type="beta_binom", params=list(alpha=2,   beta=2)),
-    list(type="beta_binom", params=list(alpha=1,   beta=2)),
-    list(type="beta_binom", params=list(alpha=2,   beta=1))
+    list(type="beta_binom", params=list(alpha1=1,   beta1=1,   alpha0=1,   beta0=1)),
+    list(type="beta_binom", params=list(alpha1=0.5, beta1=0.5, alpha0=0.5, beta0=0.5)),
+    list(type="beta_binom", params=list(alpha1=2,   beta1=2,   alpha0=2,   beta0=2)),
+    list(type="beta_binom", params=list(alpha1=1,   beta1=2,   alpha0=1,   beta0=2)),
+    list(type="beta_binom", params=list(alpha1=2,   beta1=1,   alpha0=2,   beta0=1))
   )
 )
 
