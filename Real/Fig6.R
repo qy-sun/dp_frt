@@ -136,11 +136,11 @@ print(fig_real)
 print(res_dataset1$p_nonprivate)
 print(res_dataset1$decisions)
 
-ggsave(
-  "Fig6.png",
-  plot   = fig_real,
-  width  = 8,
-  height = 4,
-  dpi    = 1000,
-  units  = "in"
-)
+# ggsave(
+#   "Fig6.png",
+#   plot   = fig_real,
+#   width  = 8,
+#   height = 4,
+#   dpi    = 1000,
+#   units  = "in"
+# )
