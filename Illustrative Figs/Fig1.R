@@ -52,7 +52,7 @@ for (i in seq_along(eps_list)){
     epsilon = eps,
     prior   = list(type = "uniform"),
     method  = "enumerate",
-    alpha   = 0.05,
+    alpha_CI   = 0.05,
     seed    = s,
     clip    = TRUE
   )
