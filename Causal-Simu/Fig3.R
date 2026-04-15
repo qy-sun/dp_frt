@@ -62,7 +62,7 @@ cdf_all_raw <- purrr::map_dfr(seq_len(nrow(design_grid)), function(i) {
         epsilon = ep,
         prior   = prior_cr,
         method  = method_use,
-        alpha   = alpha_use,
+        alpha_CI   = alpha_use,
         clip    = clip_tilde
       )
       post <- fit$posterior_p
@@ -119,6 +119,34 @@ psi_points <- cdf_all_mean |>
   ) |>
   mutate(x_alpha = alpha_use)
 
+# ---- Non-private baseline: true FRT p-value per (scenario, sample_size) ---
+nonprivate_df <- design_grid |>
+  mutate(
+    p_nonprivate = phyper(
+      q = n11 - 1,
+      m = n11 + n01,
+      n = (n1 + n0) - (n11 + n01),
+      k = n1,
+      lower.tail = FALSE
+    )
+  ) |>
+  select(scenario, sample_size, p_nonprivate) |>
+  mutate(
+    scenario = factor(
+      scenario,
+      levels = c("no_effect","small","medium","large"),
+      labels = c("Case 1: No effect",
+                 "Case 2: Small effect",
+                 "Case 3: Medium effect",
+                 "Case 4: Large effect")
+    ),
+    sample_size = factor(
+      sample_size,
+      levels = c("small","medium","large"),
+      labels = c("n=100","n=500","n=1000")
+    )
+  )
+
 
 
 cols <- scales::hue_pal()(length(eps_grid))
@@ -128,17 +156,28 @@ fig3_mean <- ggplot(cdf_all_mean,
                     aes(x = u, y = cdf,
                         color = epsilon_f, group = epsilon_f)) +
   geom_step(linewidth = 0.75) +
+  geom_vline(data = nonprivate_df,
+             aes(xintercept = p_nonprivate, linetype = "Non-private"),
+             color = "black",
+             linewidth = 0.8) +
   geom_point(data = psi_points,
              aes(x = x_alpha, y = psi, color = epsilon_f),
              size = 1.5,
              inherit.aes = FALSE) +
-  geom_vline(xintercept = alpha_use, linetype = "dashed", color = "grey40") +
+  geom_vline(xintercept = alpha_use, linetype = "dotted", color = "grey40") +
   scale_x_continuous(limits = c(0, 1)) +
   scale_y_continuous(limits = c(0, 1)) +
   scale_color_manual(
     values = cols,
     labels = parse(text = paste0("epsilon == ", eps_grid)),
     name   = "Privacy Budget"
+  ) +
+  scale_linetype_manual(
+    values = c("Non-private" = "dashed"),
+    name   = NULL
+  ) +
+  guides(
+    linetype = guide_legend(override.aes = list(color = "black"))
   ) +
   facet_grid(rows = vars(sample_size), cols = vars(scenario)) +
   labs(
