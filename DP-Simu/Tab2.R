@@ -23,7 +23,7 @@ sim_once_cover <- function(n11, n10, n01, n00, epsilon,
                            prior  = list(type = "uniform"),
                            alpha_CI  = 0.05,
                            method = "enumerate",
-                           clip_tilde = FALSE) {
+                           clip_tilde = TRUE) {
   n1 <- n11 + n10
   n0 <- n01 + n00
   p_true <- frt_p(a = n11, b = n01, n1 = n1, n0 = n0)
