@@ -252,7 +252,7 @@ dp_frt <- function(
           out_a[i] <- a_cur
           out_b[i] <- b_cur
           out_u[i] <- p_frta(a_cur, b_cur)
-          kept <- i
+          kept <- kept + 1
         }
         if (iters > 1e8) stop("MH did not finish; reduce R or check prior.")
       }
