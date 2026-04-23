@@ -1,6 +1,6 @@
-# **Code for "Differentially Private Fisher Randomization Tests for Binary Outcomes"**
+# **Code for "Differentially Private Hypothesis Tests of Fisher's Sharp Null for Binary Outcomes"**
 
-This repository contains code for reproducing the results in the paper *"Differentially Private Fisher Randomization Tests for Binary Outcomes"*. 
+This repository contains code for reproducing the results in the paper *"Differentially Private Hypothesis Tests of Fisher's Sharp Null for Binary Outcomes"*. 
 The article is available on [arXiv](https://arxiv.org/abs/2511.20884) and under review.
 
 ---
@@ -17,7 +17,7 @@ The repository is organized into the following main directories:
 | **Illustrative Figs/** | Code for generating illustrative figures **Figures 1-2**. |
 | **DP-Simu/** | Code for assessing DP-FRT-Bayes estimates of p-values, including **Table 1** and **Table 2**. |
 | **Causal-Simu/** | Code for evaluating decision rules under DP-FRT-Bayes, including **Table 3** and **Figures 3-5**. |
-| **Real/** | Analysis of ADAPTABLE trial for producing **Figure 6**. |
+| **Real/** | Analysis of ADAPTABLE trial for producing **Figure 6**, **Figure 7**, and frequentist testing (Tab4.R). |
 | **Supp/** | Code for additional simulation studies in the supplementary material, including **Tables S1-S2** and **Figures S1-S4**. |
 
 ---
