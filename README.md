@@ -1,6 +1,7 @@
 # **Code for "Differentially Private Tests of Fisher's Sharp Null Hypothesis for Binary Outcomes"**
 
 This repository contains code for reproducing the results in the paper *"Differentially Private Tests of Fisher's Sharp Null Hypothesis for Binary Outcomes"*. 
+
 Published in [Electronic Journal of Statistics](https://arxiv.org/abs/2511.20884) and available on [arXiv](https://arxiv.org/abs/2511.20884).
 
 ---
